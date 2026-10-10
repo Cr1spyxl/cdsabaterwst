@@ -1,0 +1,3 @@
+CREATE DATABASE IF NOT EXISTS tfa1_pos
+    CHARACTER SET utf8mb4
+    COLLATE utf8mb4_general_ci;

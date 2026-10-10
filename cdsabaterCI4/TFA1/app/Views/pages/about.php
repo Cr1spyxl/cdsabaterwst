@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About QuickPOS</title>
+    <title>About ChrisPOS</title>
     <style>
         body {
             margin: 0;
@@ -76,7 +76,7 @@
 <body>
     <nav>
         <div class="nav-wrap">
-            <a class="brand" href="<?= base_url('/') ?>">QuickPOS</a>
+            <a class="brand" href="<?= base_url('/') ?>">ChrisPOS</a>
             <div class="nav-links">
                 <a href="<?= base_url('/') ?>">Home</a>
                 <a href="<?= base_url('about') ?>">About</a>
@@ -88,9 +88,9 @@
 
     <div class="container">
         <div class="card">
-            <h1>About QuickPOS</h1>
+            <h1>About ChrisPOS</h1>
             <p>
-                QuickPOS is a lightweight point-of-sale system created for small retail shops,
+                ChrisPOS is a lightweight point-of-sale system created for small retail shops,
                 convenience stores, and service counters that need fast and organized daily operations.
             </p>
             <p>

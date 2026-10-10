@@ -132,7 +132,7 @@
 <body>
     <nav>
         <div class="nav-wrap">
-            <a class="brand" href="<?= base_url('/') ?>">QuickPOS</a>
+            <a class="brand" href="<?= base_url('/') ?>">ChrisPOS</a>
             <div class="nav-links">
                 <a href="<?= base_url('/') ?>">Home</a>
                 <a href="<?= base_url('about') ?>">About</a>
@@ -144,7 +144,7 @@
 
     <div class="container">
         <section class="hero">
-            <h1>Welcome to QuickPOS</h1>
+            <h1>Welcome to ChrisPOS</h1>
             <p>
                 A simple and modern point-of-sale dashboard for managing daily sales,
                 customer information, and staff accounts in one place.

@@ -95,7 +95,7 @@
 <body>
     <nav>
         <div class="nav-wrap">
-            <a class="brand" href="<?= base_url('/') ?>">QuickPOS</a>
+            <a class="brand" href="<?= base_url('/') ?>">ChrisPOS</a>
             <div class="nav-links">
                 <a href="<?= base_url('/') ?>">Home</a>
                 <a href="<?= base_url('about') ?>">About</a>
@@ -113,7 +113,7 @@
                     <tr>
                         <th>Username</th>
                         <th>Full Name</th>
-                        <th>Role</th>
+                        <th>Created At</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -121,7 +121,7 @@
                         <tr>
                             <td><?= esc($user['username']) ?></td>
                             <td><?= esc($user['full_name']) ?></td>
-                            <td><?= esc($user['role']) ?></td>
+                            <td><?= esc($user['created_at']) ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
