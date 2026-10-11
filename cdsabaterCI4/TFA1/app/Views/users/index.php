@@ -90,6 +90,9 @@
         tbody tr:hover {
             background: #f8fafc;
         }
+        .button { display:inline-block; padding:9px 13px; border-radius:8px; background:#2563eb; color:white; text-decoration:none; }
+        .notice { padding:12px; border-radius:8px; background:#dcfce7; color:#166534; }
+        .avatar { width:48px; height:48px; object-fit:cover; border-radius:50%; vertical-align:middle; }
     </style>
 </head>
 <body>
@@ -108,20 +111,26 @@
     <div class="container">
         <div class="card">
             <h1>User Accounts</h1>
+            <?php if (session()->getFlashdata('message')): ?><p class="notice"><?= esc(session()->getFlashdata('message')) ?></p><?php endif ?>
+            <a class="button" href="<?= base_url('users/new') ?>">New User</a>
             <table>
                 <thead>
                     <tr>
+                        <th>Avatar</th>
                         <th>Username</th>
                         <th>Full Name</th>
                         <th>Created At</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($users as $user): ?>
                         <tr>
+                            <td><img class="avatar" src="<?= ! empty($user['avatar']) ? base_url('uploads/avatars/' . rawurlencode($user['avatar'])) : base_url('avatar-placeholder.svg') ?>" alt="<?= esc($user['full_name']) ?> avatar"></td>
                             <td><?= esc($user['username']) ?></td>
                             <td><?= esc($user['full_name']) ?></td>
                             <td><?= esc($user['created_at']) ?></td>
+                            <td><a href="<?= base_url('users/' . $user['id'] . '/edit') ?>">Edit</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

@@ -90,6 +90,8 @@
         tbody tr:hover {
             background: #f8fafc;
         }
+        .button { display:inline-block; padding:9px 13px; border-radius:8px; background:#2563eb; color:white; text-decoration:none; }
+        .notice { padding:12px; border-radius:8px; background:#dcfce7; color:#166534; }
     </style>
 </head>
 <body>
@@ -108,12 +110,15 @@
     <div class="container">
         <div class="card">
             <h1>Customer Accounts</h1>
+            <?php if (session()->getFlashdata('message')): ?><p class="notice"><?= esc(session()->getFlashdata('message')) ?></p><?php endif ?>
+            <a class="button" href="<?= base_url('customers/new') ?>">New Customer</a>
             <table>
                 <thead>
                     <tr>
                         <th>Full Name</th>
                         <th>Email</th>
                         <th>Phone</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -122,6 +127,7 @@
                             <td><?= esc($customer['full_name']) ?></td>
                             <td><?= esc($customer['email']) ?></td>
                             <td><?= esc($customer['phone']) ?></td>
+                            <td><a href="<?= base_url('customers/' . $customer['id'] . '/edit') ?>">Edit</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
